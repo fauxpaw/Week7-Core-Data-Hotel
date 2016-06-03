@@ -1,4 +1,5 @@
 #Week 8 - Class 2
+##Lab Assignment
 * Seed your data base with the JSON payload provided
 * Implement Book functionality. Guests should be able to set both, the start and end reservation dates, specify the room they want and finally book it.
 	* Guest name is required... feel free to add more requirements.
@@ -9,6 +10,13 @@
 * Change your Guest model accordingly to have firstName, lastName, and email address.
 * Update UI to include fields for lastName and email in BookVC and setup constraints.
 * Assign lastName and email to guest.
+
+###Reading Assignment:
+* Programming In Objective-C
+  * **Chapter 12:** The Preprocessor
+* Apple Documentation
+  * [NSDateFormatter](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/)
+  * [NSPredicated - NSHipters](http://nshipster.com/nspredicate/)
 
 ##Other Resources
 * [Reading Assignments](../../Resources/ra-grading-standard/)
