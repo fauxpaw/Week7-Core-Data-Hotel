@@ -9,9 +9,9 @@
 
 ###Reading Assignment:
 * Apple Documentation + Other
-  * [Unit Testing Overview](https://developer.apple.com/library/ios/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html)
-  * [Unit Testing - NSHipster](http://nshipster.com/unit-testing/)
-  * [Introduction to NSFetchedResults Controller](http://nshipster.com/unit-testing/)
+  * [Core Data Migrations - OBJC](https://www.objc.io/issues/4-core-data/core-data-migration/)
+  * [Using iCloud with Core Data - Apple](https://developer.apple.com/library/ios/documentation/DataManagement/Conceptual/UsingCoreDataWithiCloudPG/Introduction/Introduction.html)
+  * [Fabric for iOS](https://get.fabric.io/ios?locale=en-us)
 
 ##Other Resources
 * [Reading Assignments](../../Resources/ra-grading-standard/)

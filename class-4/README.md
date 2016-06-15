@@ -7,10 +7,8 @@
 	* Localize your app for another language (your pick).
 
 ###Reading Assignment:
-* Apple Documentation + Other
-  * [Core Data Migrations - OBJC](https://www.objc.io/issues/4-core-data/core-data-migration/)
-  * [Using iCloud with Core Data - Apple](https://developer.apple.com/library/ios/documentation/DataManagement/Conceptual/UsingCoreDataWithiCloudPG/Introduction/Introduction.html)
-  * [Fabric for iOS](https://get.fabric.io/ios?locale=en-us)
+* [Unit Testing - NSHipster](http://nshipster.com/unit-testing/)
+
 
 ##Other Resources
 * [Reading Assignments](../../Resources/ra-grading-standard/)

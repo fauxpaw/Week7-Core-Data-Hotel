@@ -12,11 +12,9 @@
 * Assign lastName and email to guest.
 
 ###Reading Assignment:
-* Programming In Objective-C
-  * **Chapter 12:** The Preprocessor
-* Apple Documentation
-  * [NSDateFormatter](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/)
-  * [NSPredicated - NSHipters](http://nshipster.com/nspredicate/)
+* Apple Documentation + Other
+  * [Unit Testing Overview](https://developer.apple.com/library/ios/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html)
+  * [Introduction to NSFetchedResults Controller](http://nshipster.com/unit-testing/)
 
 ##Other Resources
 * [Reading Assignments](../../Resources/ra-grading-standard/)

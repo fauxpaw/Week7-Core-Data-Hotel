@@ -6,9 +6,11 @@
 * Upon selecting a hotel, push to RoomsViewController, which shows all the rooms of that hotel in another table view.
 
 ###Reading Assignment
+* Programming In Objective-C
+  * **Chapter 12:** The Preprocessor
 * Apple Documentation
-  * [Introduction to Core Data](https://developer.apple.com/library/watchos/documentation/Cocoa/Conceptual/CoreData/index.html)
-  * [Introduction to Visual Format](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html)
+  * [NSDateFormatter](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/)
+  * [NSPredicated - NSHipters](http://nshipster.com/nspredicate/)
 
 ##Other Resources
 * [Reading Assignments](../../Resources/ra-grading-standard/)
