@@ -108,12 +108,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Room *room = self.datasource[indexPath.row];
-    BookViewController *bookViewController = [[bookViewController  alloc] init];
+    BookViewController *bookViewController = [[BookViewController alloc] init];
     
     bookViewController.endDate = self.endDate;
     //TODO: start date
     
-    [[self.navigationController pushViewController:bookViewController animated:YES];
+    [self.navigationController pushViewController:bookViewController animated:YES];
      }
      
      -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

@@ -30,7 +30,13 @@
     NSManagedObjectContext *context = delegate.managedObjectContext;
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Guest"];
-    NSArray *guests = [context executeRequest:request error:nil];
+    NSError *error;
+    
+    NSArray *guests = [context executeRequest:request error:&error];
+    
+    if (error) {
+        NSLog(@"error found: %@", error);
+    }
     
     NSLog(@"Guest Count: %li", guests.count);
 }

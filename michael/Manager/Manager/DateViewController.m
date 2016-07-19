@@ -28,13 +28,6 @@
     
 }
 
--(void)setupDateViewController{
-
-    [self.navigationItem setTitle:@"Select End Date"]
-    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:(doneButtonSelected:)]] ];
-    
-}
-
 -(void)setupDatePickers{
     self.endPicker = [[UIDatePicker alloc] init];
     self.endPicker.datePickerMode = UIDatePickerModeDate;
@@ -64,6 +57,13 @@
     availabilityViewController.endDate = endDate;
 
     [self.navigationController pushViewController:availabilityViewController animated:YES];
+}
+
+-(void)setupDateViewController{
+    
+    [self.navigationItem setTitle:@"Select End Date"];
+    
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonSelected:)]];
 }
 
 

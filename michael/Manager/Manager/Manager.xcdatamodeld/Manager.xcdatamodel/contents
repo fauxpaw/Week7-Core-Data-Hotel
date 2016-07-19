@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="Guest" representedClassName="Guest" syncable="YES">
-        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="reservation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reservation" inverseName="guest" inverseEntity="Reservation" syncable="YES"/>
     </entity>
     <entity name="Hotel" representedClassName="Hotel" syncable="YES">
@@ -24,9 +26,9 @@
         <relationship name="reservation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reservation" inverseName="room" inverseEntity="Reservation" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Guest" positionX="-38" positionY="84" width="128" height="105"/>
         <element name="Hotel" positionX="-216" positionY="-81" width="128" height="103"/>
-        <element name="Room" positionX="-36" positionY="-180" width="128" height="118"/>
         <element name="Reservation" positionX="-36" positionY="-39" width="128" height="103"/>
-        <element name="Guest" positionX="-38" positionY="84" width="128" height="73"/>
+        <element name="Room" positionX="-36" positionY="-180" width="128" height="118"/>
     </elements>
 </model>
