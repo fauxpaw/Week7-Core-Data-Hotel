@@ -36,7 +36,6 @@
 -(void) setupCustomLayout {
 
     float navigationBarHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
-//    float viewHeight = self.view.frame.size.height - navigationBarHeight;
     
     UIButton *browseButton = [[UIButton alloc]init];
     UIButton *bookButton = [[UIButton alloc] init];
