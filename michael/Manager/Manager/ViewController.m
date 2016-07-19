@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "HotelsViewController.h"
+#import "DateViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -19,6 +21,18 @@
     [super loadView];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self setupCustomLayout];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    AppDelegate *delegate = [[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext *context = delegate.managedObjectContext;
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Guest"];
+    NSArray *guests = [context executeRequest:request error:nil];
+    
+    NSLog(@"Guest Count: %li", guests.count);
 }
 
 - (void)viewDidLoad {
@@ -91,6 +105,8 @@
 }
 
 -(void) bookButtonSelected:(UIButton *)sender {
+    
+    [self.navigationController pushViewController:[[DateViewController alloc] init] animated:YES];
     
 }
 
