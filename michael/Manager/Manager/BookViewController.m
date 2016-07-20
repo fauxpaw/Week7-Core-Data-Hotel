@@ -15,6 +15,7 @@
 @property (strong, nonatomic)UITextField *lastNameField;
 @property (strong, nonatomic)UITextField *emailField;
 
+
 @end
 
 @implementation BookViewController
@@ -23,8 +24,6 @@
     [super viewDidLoad];
     [self setupMessageLabel];
     [self setupInputFields];
-    
-    
 }
 
 -(void)loadView{
@@ -39,11 +38,6 @@
 
 -(void)setupInputFields{
     
-    NSMutableArray *textFieldArray = [[NSMutableArray alloc]init];
-    [textFieldArray addObject:self.firstNameField];
-    [textFieldArray addObject:self.lastNameField];
-    [textFieldArray addObject:self.emailField];
-
     self.firstNameField = [[UITextField alloc] init];
     self.firstNameField.placeholder = @"First Name";
     self.lastNameField = [[UITextField alloc] init];
@@ -51,43 +45,51 @@
     self.emailField = [[UITextField alloc] init];
     self.emailField.placeholder = @"Email";
     
+    NSMutableArray *textFieldArray = [[NSMutableArray alloc]init];
+    [textFieldArray addObject:self.firstNameField];
+    [textFieldArray addObject:self.lastNameField];
+    [textFieldArray addObject:self.emailField];
     
-    [self.view addSubview:self.firstNameField];
-    [self.view addSubview:self.lastNameField];
-    [self.view addSubview:self.emailField];
-
     for (UITextField *field in textFieldArray) {
         
         field.translatesAutoresizingMaskIntoConstraints = NO;
         
         NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:field attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:20];
         NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:field attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:-20];
+        [self.view addSubview:field];
+        field.layer.borderColor = [[UIColor blackColor] CGColor];
+        field.layer.borderWidth = 2;
+        field.layer.cornerRadius = 3.0;
         leading.active = YES;
         trailing.active = YES;
     }
     
     NSLayoutConstraint *firstNameFieldTop = [NSLayoutConstraint constraintWithItem:self.firstNameField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:84];
     
-    NSLayoutConstraint *lastNameFieldTop = [NSLayoutConstraint constraintWithItem:self.lastNameField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.firstNameField attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+    NSLayoutConstraint *lastNameFieldTop = [NSLayoutConstraint constraintWithItem:self.lastNameField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:114];
     
+    NSLayoutConstraint *emailFieldTop = [NSLayoutConstraint constraintWithItem:self.emailField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:144];
+
     firstNameFieldTop.active = YES;
     lastNameFieldTop.active = YES;
+    emailFieldTop.active = YES;
 
-    
-    
     [self.firstNameField becomeFirstResponder];
     
 }
 
 -(void)setupMessageLabel{
+    
     UILabel *messageLabel = [[UILabel alloc] init];
     messageLabel.textAlignment = NSTextAlignmentCenter;
     messageLabel.numberOfLines = 0;
     messageLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    //TODO: startdate 
-    messageLabel.text = [NSString stringWithFormat:@"Reservation at %@, Room: %i, From: Today - To:%@", self.room.hotel.name, self.room.number.intValue, [NSDateFormatter localizedStringFromDate:self.endDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+
+    messageLabel.text = [NSString stringWithFormat:@"Reservation at %@, Room: %i, From: %@ - To:%@", self.room.hotel.name, self.room.number.intValue,[NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle],[NSDateFormatter localizedStringFromDate:self.endDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+    NSLog(@"%@", messageLabel.text);
     
     [self.view addSubview:messageLabel];
+    
     NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:messageLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:20];
     
     NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:messageLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:-20];
@@ -101,8 +103,7 @@
 }
 
 -(void)saveButtonSelected: (UIBarButtonItem *)sender{
-    //TODO: implement actual start date
-    Reservation *reservation = [Reservation reservationWithStartDate:[NSDate date] endDate:self.endDate room:self.room];
+    Reservation *reservation = [Reservation reservationWithStartDate:self.startDate endDate:self.endDate room:self.room];
     self.room.reservation = reservation;
     reservation.guest = [Guest guestWithFields:self.firstNameField.text lastName:self.lastNameField.text email:self.emailField.text];
     

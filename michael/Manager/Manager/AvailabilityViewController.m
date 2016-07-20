@@ -29,29 +29,50 @@
 }
 
 -(void)setupTableView{
-    self.tableView = [[UITableView alloc] init];
+    
+    self.tableView = [[UITableView alloc]init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:self.tableView];
-    [self.tableView registerClass:[UITableView class] forCellReuseIdentifier:@"cell"];
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.tableView
+                                                               attribute:NSLayoutAttributeLeading
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.view
+                                                               attribute:NSLayoutAttributeLeading
+                                                              multiplier:1.0 constant:0.0];
     
     
-    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.tableView
+                                                           attribute:NSLayoutAttributeTop
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:self.view
+                                                           attribute:NSLayoutAttributeTop
+                                                          multiplier:1.0 constant:0.0];
     
-    NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:self.tableView
+                                                                attribute:NSLayoutAttributeTrailing
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:self.view
+                                                                attribute:NSLayoutAttributeTrailing
+                                                               multiplier:1.0 constant:0.0];
     
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.tableView
+                                                              attribute:NSLayoutAttributeBottom
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.view
+                                                              attribute:NSLayoutAttributeBottom
+                                                             multiplier:1.0 constant:0.0];
     
-    NSLayoutConstraint *bot = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
-    
-    
-    leading.active = YES;
+    leading.active =YES;
     trailing.active = YES;
     top.active = YES;
-    bot.active = YES;
-    
+    bottom.active = YES;
 }
 
 
@@ -63,7 +84,7 @@
         
         //TODO: start date for NSDate date
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservation"];
-        request.predicate = [NSPredicate predicateWithFormat:@"startDate <= %@ AND end >= %@", self.endDate, [NSDate date]];
+        request.predicate = [NSPredicate predicateWithFormat:@"startDate <= %@ AND endDate >= %@", self.endDate, [NSDate date]];
         
         NSArray *results = [delegate.managedObjectContext executeFetchRequest:request error:nil];
         NSMutableArray *unavailableRooms = [[NSMutableArray alloc] init];
@@ -89,10 +110,12 @@
 #pragma mark - UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSLog(@"Datasource count: %lu", (unsigned long)self.datasource.count);
     return [self.datasource count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     if (!cell) {
@@ -107,24 +130,26 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     Room *room = self.datasource[indexPath.row];
     BookViewController *bookViewController = [[BookViewController alloc] init];
     
+    bookViewController.room = room;
     bookViewController.endDate = self.endDate;
-    //TODO: start date
+    bookViewController.startDate = self.startDate;
     
     [self.navigationController pushViewController:bookViewController animated:YES];
-     }
-     
-     -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-         UIImage *headerImage = [UIImage imageNamed:@"hotel"];
-         UIImageView *imageView = [[UIImageView alloc] initWithImage:headerImage];
-         
-         imageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-         
-         imageView.clipsToBounds = YES;
-         
-         return imageView;
-     }
-     
-     @end
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIImage *headerImage = [UIImage imageNamed:@"hotel"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:headerImage];
+    
+    imageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    
+    imageView.clipsToBounds = YES;
+    
+    return imageView;
+}
+
+@end

@@ -32,13 +32,14 @@
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Guest"];
     NSError *error;
     
-    NSArray *guests = [context executeRequest:request error:&error];
+    NSArray *guests = [context executeFetchRequest:request error:&error];
     
     if (error) {
         NSLog(@"error found: %@", error);
     }
     
     NSLog(@"Guest Count: %li", guests.count);
+    
 }
 
 - (void)viewDidLoad {
