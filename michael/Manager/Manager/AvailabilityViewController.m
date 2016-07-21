@@ -75,8 +75,6 @@
     bottom.active = YES;
 }
 
-
-
 -(NSArray *)datasource{
     
     if (!_datasource) {

@@ -28,7 +28,20 @@
 		4CDD8D831D3E9F9F00D04A92 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8D821D3E9F9F00D04A92 /* AvailabilityViewController.m */; };
 		4CDD8D861D3EA89E00D04A92 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8D851D3EA89E00D04A92 /* DateViewController.m */; };
 		4CDD8D891D3EDA6B00D04A92 /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8D881D3EDA6B00D04A92 /* Guest.m */; };
+		4CDD8D911D40F2AB00D04A92 /* ManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8D901D40F2AB00D04A92 /* ManagerTests.m */; };
+		4CDD8D9A1D4113C200D04A92 /* LookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8D991D4113C200D04A92 /* LookupViewController.m */; };
+		4CDD8DB61D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8DB51D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CDD8D931D40F2AB00D04A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C0732CC1D3D500F00C1F3ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C0732D31D3D500F00C1F3ED;
+			remoteInfo = Manager;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4C0732D41D3D500F00C1F3ED /* Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,10 +83,25 @@
 		4CDD8D851D3EA89E00D04A92 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		4CDD8D871D3EDA6B00D04A92 /* Guest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guest.h; sourceTree = "<group>"; };
 		4CDD8D881D3EDA6B00D04A92 /* Guest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guest.m; sourceTree = "<group>"; };
+		4CDD8D8E1D40F2AB00D04A92 /* ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDD8D901D40F2AB00D04A92 /* ManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerTests.m; sourceTree = "<group>"; };
+		4CDD8D921D40F2AB00D04A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CDD8D981D4113C200D04A92 /* LookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookupViewController.h; sourceTree = "<group>"; };
+		4CDD8D991D4113C200D04A92 /* LookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookupViewController.m; sourceTree = "<group>"; };
+		4CDD8D9C1D41349000D04A92 /* Manager1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Manager1.2.xcdatamodel; sourceTree = "<group>"; };
+		4CDD8DB51D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModel1.1_1.2.xcmappingmodel; sourceTree = "<group>"; };
+		4CDD8DB71D41411F00D04A92 /* Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Manager.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4C0732D11D3D500F00C1F3ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDD8D8B1D40F2AA00D04A92 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,6 +116,7 @@
 			children = (
 				4CDD8D7D1D3E8F8D00D04A92 /* Category */,
 				4C0732D61D3D500F00C1F3ED /* Manager */,
+				4CDD8D8F1D40F2AB00D04A92 /* ManagerTests */,
 				4C0732D51D3D500F00C1F3ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				4C0732D41D3D500F00C1F3ED /* Manager.app */,
+				4CDD8D8E1D40F2AB00D04A92 /* ManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +133,7 @@
 		4C0732D61D3D500F00C1F3ED /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4CDD8DB71D41411F00D04A92 /* Manager.entitlements */,
 				4C0732EB1D3D500F00C1F3ED /* Info.plist */,
 				4C0732F11D3D50E900C1F3ED /* App Global */,
 				4C0732F21D3D50FC00C1F3ED /* Controller */,
@@ -146,6 +177,8 @@
 				4CDD8D821D3E9F9F00D04A92 /* AvailabilityViewController.m */,
 				4CDD8D841D3EA89E00D04A92 /* DateViewController.h */,
 				4CDD8D851D3EA89E00D04A92 /* DateViewController.m */,
+				4CDD8D981D4113C200D04A92 /* LookupViewController.h */,
+				4CDD8D991D4113C200D04A92 /* LookupViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -162,23 +195,17 @@
 		4C0732F41D3D511F00C1F3ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4CDD8DB51D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel */,
 				4CDD8D871D3EDA6B00D04A92 /* Guest.h */,
 				4CDD8D881D3EDA6B00D04A92 /* Guest.m */,
-				4C07330D1D3D59FE00C1F3ED /* Reservation+CoreDataProperties.h */,
-				4C07330E1D3D59FE00C1F3ED /* Reservation+CoreDataProperties.m */,
 				4C07330F1D3D59FE00C1F3ED /* Reservation.h */,
 				4C0733101D3D59FE00C1F3ED /* Reservation.m */,
-				4C0733111D3D59FE00C1F3ED /* Guest+CoreDataProperties.h */,
-				4C0733121D3D59FE00C1F3ED /* Guest+CoreDataProperties.m */,
-				4C0733151D3D59FE00C1F3ED /* Hotel+CoreDataProperties.h */,
-				4C0733161D3D59FE00C1F3ED /* Hotel+CoreDataProperties.m */,
 				4C0733171D3D59FE00C1F3ED /* Hotel.h */,
 				4C0733181D3D59FE00C1F3ED /* Hotel.m */,
-				4C0733191D3D59FE00C1F3ED /* Room+CoreDataProperties.h */,
-				4C07331A1D3D59FE00C1F3ED /* Room+CoreDataProperties.m */,
 				4C07331B1D3D59FE00C1F3ED /* Room.h */,
 				4C07331C1D3D59FE00C1F3ED /* Room.m */,
 				4C0732E31D3D500F00C1F3ED /* Manager.xcdatamodeld */,
+				4CDD8D9B1D41326D00D04A92 /* Entities */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -190,6 +217,30 @@
 				4CDD8D7B1D3E8F8700D04A92 /* NSObject+NSManagedObjectContext.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		4CDD8D8F1D40F2AB00D04A92 /* ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD8D901D40F2AB00D04A92 /* ManagerTests.m */,
+				4CDD8D921D40F2AB00D04A92 /* Info.plist */,
+			);
+			path = ManagerTests;
+			sourceTree = "<group>";
+		};
+		4CDD8D9B1D41326D00D04A92 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4C07330D1D3D59FE00C1F3ED /* Reservation+CoreDataProperties.h */,
+				4C07330E1D3D59FE00C1F3ED /* Reservation+CoreDataProperties.m */,
+				4C0733191D3D59FE00C1F3ED /* Room+CoreDataProperties.h */,
+				4C07331A1D3D59FE00C1F3ED /* Room+CoreDataProperties.m */,
+				4C0733111D3D59FE00C1F3ED /* Guest+CoreDataProperties.h */,
+				4C0733121D3D59FE00C1F3ED /* Guest+CoreDataProperties.m */,
+				4C0733151D3D59FE00C1F3ED /* Hotel+CoreDataProperties.h */,
+				4C0733161D3D59FE00C1F3ED /* Hotel+CoreDataProperties.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +263,24 @@
 			productReference = 4C0732D41D3D500F00C1F3ED /* Manager.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4CDD8D8D1D40F2AA00D04A92 /* ManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDD8D951D40F2AB00D04A92 /* Build configuration list for PBXNativeTarget "ManagerTests" */;
+			buildPhases = (
+				4CDD8D8A1D40F2AA00D04A92 /* Sources */,
+				4CDD8D8B1D40F2AA00D04A92 /* Frameworks */,
+				4CDD8D8C1D40F2AA00D04A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CDD8D941D40F2AB00D04A92 /* PBXTargetDependency */,
+			);
+			name = ManagerTests;
+			productName = ManagerTests;
+			productReference = 4CDD8D8E1D40F2AB00D04A92 /* ManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,6 +292,16 @@
 				TargetAttributes = {
 					4C0732D31D3D500F00C1F3ED = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = NXQBD8W8TS;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					4CDD8D8D1D40F2AA00D04A92 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4C0732D31D3D500F00C1F3ED;
 					};
 				};
 			};
@@ -240,6 +319,7 @@
 			projectRoot = "";
 			targets = (
 				4C0732D31D3D500F00C1F3ED /* Manager */,
+				4CDD8D8D1D40F2AA00D04A92 /* ManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +335,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CDD8D8C1D40F2AA00D04A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -267,9 +354,11 @@
 				4C07331F1D3D59FE00C1F3ED /* Guest+CoreDataProperties.m in Sources */,
 				4CDD8D861D3EA89E00D04A92 /* DateViewController.m in Sources */,
 				4C0733231D3D59FE00C1F3ED /* Room+CoreDataProperties.m in Sources */,
+				4CDD8D9A1D4113C200D04A92 /* LookupViewController.m in Sources */,
 				4C0732DF1D3D500F00C1F3ED /* ViewController.m in Sources */,
 				4CDD8D891D3EDA6B00D04A92 /* Guest.m in Sources */,
 				4C0732DC1D3D500F00C1F3ED /* AppDelegate.m in Sources */,
+				4CDD8DB61D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel in Sources */,
 				4CDD8D831D3E9F9F00D04A92 /* AvailabilityViewController.m in Sources */,
 				4C0733241D3D59FE00C1F3ED /* Room.m in Sources */,
 				4C0732D91D3D500F00C1F3ED /* main.m in Sources */,
@@ -283,7 +372,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CDD8D8A1D40F2AA00D04A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDD8D911D40F2AB00D04A92 /* ManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CDD8D941D40F2AB00D04A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C0732D31D3D500F00C1F3ED /* Manager */;
+			targetProxy = 4CDD8D931D40F2AB00D04A92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4C0732E81D3D500F00C1F3ED /* LaunchScreen.storyboard */ = {
@@ -385,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Manager/Manager.entitlements;
 				INFOPLIST_FILE = Manager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -397,11 +503,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Manager/Manager.entitlements;
 				INFOPLIST_FILE = Manager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sweeney.Manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4CDD8D961D40F2AB00D04A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sweeney.ManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Manager.app/Manager";
+			};
+			name = Debug;
+		};
+		4CDD8D971D40F2AB00D04A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sweeney.ManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Manager.app/Manager";
 			};
 			name = Release;
 		};
@@ -426,15 +557,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4CDD8D951D40F2AB00D04A92 /* Build configuration list for PBXNativeTarget "ManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDD8D961D40F2AB00D04A92 /* Debug */,
+				4CDD8D971D40F2AB00D04A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
 		4C0732E31D3D500F00C1F3ED /* Manager.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				4CDD8D9C1D41349000D04A92 /* Manager1.2.xcdatamodel */,
 				4C0732E41D3D500F00C1F3ED /* Manager.xcdatamodel */,
 			);
-			currentVersion = 4C0732E41D3D500F00C1F3ED /* Manager.xcdatamodel */;
+			currentVersion = 4CDD8D9C1D41349000D04A92 /* Manager1.2.xcdatamodel */;
 			path = Manager.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

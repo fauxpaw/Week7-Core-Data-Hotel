@@ -12,7 +12,6 @@
 #import "Reservation.h"
 #import "Guest.h"
 
-
 @interface BookViewController : UIViewController
 
 @property (strong, nonatomic)Room *room;

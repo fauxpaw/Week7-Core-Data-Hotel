@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupBookViewController];
     [self setupMessageLabel];
     [self setupInputFields];
 }
@@ -86,6 +87,7 @@
     messageLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
     messageLabel.text = [NSString stringWithFormat:@"Reservation at %@, Room: %i, From: %@ - To:%@", self.room.hotel.name, self.room.number.intValue,[NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle],[NSDateFormatter localizedStringFromDate:self.endDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+    
     NSLog(@"%@", messageLabel.text);
     
     [self.view addSubview:messageLabel];
@@ -94,7 +96,7 @@
     
     NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:messageLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:-20];
     
-    NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:messageLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:messageLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
     
     centerY.active = YES;
     trailing.active = YES;
