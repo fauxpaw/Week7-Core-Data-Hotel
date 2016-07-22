@@ -13,6 +13,8 @@
 #import "Reservation.h"
 #import "Guest.h"
 
+#import "Flurry.h"
+
 @interface AppDelegate ()
 
 @property (strong, nonatomic) UINavigationController *navigationController;
@@ -27,6 +29,8 @@
     
     [self setupRootViewController];
     [self bootStrapApp];
+    [Flurry startSession:@"<insert project key#!!!!!>"];
+    [Flurry logEvent:@"Launched Application!"];
     return YES;
 }
 

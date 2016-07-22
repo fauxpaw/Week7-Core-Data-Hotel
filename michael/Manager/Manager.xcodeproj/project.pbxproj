@@ -31,6 +31,12 @@
 		4CDD8D911D40F2AB00D04A92 /* ManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8D901D40F2AB00D04A92 /* ManagerTests.m */; };
 		4CDD8D9A1D4113C200D04A92 /* LookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8D991D4113C200D04A92 /* LookupViewController.m */; };
 		4CDD8DB61D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8DB51D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel */; };
+		4CDD8DBB1D416EB800D04A92 /* MappingModel1.2_1.3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8DBA1D416EB800D04A92 /* MappingModel1.2_1.3.xcmappingmodel */; };
+		4CDD8DC21D41733600D04A92 /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8DBE1D41733600D04A92 /* FlurryEmpty.m */; };
+		4CDD8DC31D41733600D04A92 /* libFlurry_7.6.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD8DC01D41733600D04A92 /* libFlurry_7.6.6.a */; };
+		4CDD8DC41D41733600D04A92 /* libFlurryWatch_7.6.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD8DC11D41733600D04A92 /* libFlurryWatch_7.6.6.a */; };
+		4CDD8DC61D41738D00D04A92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD8DC51D41738D00D04A92 /* Security.framework */; };
+		4CDD8DC81D4174BE00D04A92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD8DC71D4174BE00D04A92 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,15 @@
 		4CDD8D9C1D41349000D04A92 /* Manager1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Manager1.2.xcdatamodel; sourceTree = "<group>"; };
 		4CDD8DB51D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModel1.1_1.2.xcmappingmodel; sourceTree = "<group>"; };
 		4CDD8DB71D41411F00D04A92 /* Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Manager.entitlements; sourceTree = "<group>"; };
+		4CDD8DB81D41673F00D04A92 /* Manager1. 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Manager1. 3.xcdatamodel"; sourceTree = "<group>"; };
+		4CDD8DBA1D416EB800D04A92 /* MappingModel1.2_1.3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModel1.2_1.3.xcmappingmodel; sourceTree = "<group>"; };
+		4CDD8DBD1D41733600D04A92 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		4CDD8DBE1D41733600D04A92 /* FlurryEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryEmpty.m; sourceTree = "<group>"; };
+		4CDD8DBF1D41733600D04A92 /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
+		4CDD8DC01D41733600D04A92 /* libFlurry_7.6.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.6.6.a; sourceTree = "<group>"; };
+		4CDD8DC11D41733600D04A92 /* libFlurryWatch_7.6.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryWatch_7.6.6.a; sourceTree = "<group>"; };
+		4CDD8DC51D41738D00D04A92 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4CDD8DC71D4174BE00D04A92 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +113,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDD8DC81D4174BE00D04A92 /* SystemConfiguration.framework in Frameworks */,
+				4CDD8DC61D41738D00D04A92 /* Security.framework in Frameworks */,
+				4CDD8DC31D41733600D04A92 /* libFlurry_7.6.6.a in Frameworks */,
+				4CDD8DC41D41733600D04A92 /* libFlurryWatch_7.6.6.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,10 +133,13 @@
 		4C0732CB1D3D500F00C1F3ED = {
 			isa = PBXGroup;
 			children = (
+				4CDD8DC71D4174BE00D04A92 /* SystemConfiguration.framework */,
+				4CDD8DC51D41738D00D04A92 /* Security.framework */,
 				4CDD8D7D1D3E8F8D00D04A92 /* Category */,
 				4C0732D61D3D500F00C1F3ED /* Manager */,
 				4CDD8D8F1D40F2AB00D04A92 /* ManagerTests */,
 				4C0732D51D3D500F00C1F3ED /* Products */,
+				4CDD8DBC1D41733600D04A92 /* Flurry */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,14 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				4CDD8DB51D41385500D04A92 /* MappingModel1.1_1.2.xcmappingmodel */,
-				4CDD8D871D3EDA6B00D04A92 /* Guest.h */,
-				4CDD8D881D3EDA6B00D04A92 /* Guest.m */,
-				4C07330F1D3D59FE00C1F3ED /* Reservation.h */,
-				4C0733101D3D59FE00C1F3ED /* Reservation.m */,
-				4C0733171D3D59FE00C1F3ED /* Hotel.h */,
-				4C0733181D3D59FE00C1F3ED /* Hotel.m */,
-				4C07331B1D3D59FE00C1F3ED /* Room.h */,
-				4C07331C1D3D59FE00C1F3ED /* Room.m */,
+				4CDD8DBA1D416EB800D04A92 /* MappingModel1.2_1.3.xcmappingmodel */,
+				4CDD8DB91D41677900D04A92 /* No touchie */,
 				4C0732E31D3D500F00C1F3ED /* Manager.xcdatamodeld */,
 				4CDD8D9B1D41326D00D04A92 /* Entities */,
 			);
@@ -241,6 +257,33 @@
 				4C0733161D3D59FE00C1F3ED /* Hotel+CoreDataProperties.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		4CDD8DB91D41677900D04A92 /* No touchie */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD8D871D3EDA6B00D04A92 /* Guest.h */,
+				4CDD8D881D3EDA6B00D04A92 /* Guest.m */,
+				4C07330F1D3D59FE00C1F3ED /* Reservation.h */,
+				4C0733101D3D59FE00C1F3ED /* Reservation.m */,
+				4C0733171D3D59FE00C1F3ED /* Hotel.h */,
+				4C0733181D3D59FE00C1F3ED /* Hotel.m */,
+				4C07331B1D3D59FE00C1F3ED /* Room.h */,
+				4C07331C1D3D59FE00C1F3ED /* Room.m */,
+			);
+			name = "No touchie";
+			sourceTree = "<group>";
+		};
+		4CDD8DBC1D41733600D04A92 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD8DBD1D41733600D04A92 /* Flurry.h */,
+				4CDD8DBE1D41733600D04A92 /* FlurryEmpty.m */,
+				4CDD8DBF1D41733600D04A92 /* FlurryWatch.h */,
+				4CDD8DC01D41733600D04A92 /* libFlurry_7.6.6.a */,
+				4CDD8DC11D41733600D04A92 /* libFlurryWatch_7.6.6.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,7 +397,9 @@
 				4C07331F1D3D59FE00C1F3ED /* Guest+CoreDataProperties.m in Sources */,
 				4CDD8D861D3EA89E00D04A92 /* DateViewController.m in Sources */,
 				4C0733231D3D59FE00C1F3ED /* Room+CoreDataProperties.m in Sources */,
+				4CDD8DBB1D416EB800D04A92 /* MappingModel1.2_1.3.xcmappingmodel in Sources */,
 				4CDD8D9A1D4113C200D04A92 /* LookupViewController.m in Sources */,
+				4CDD8DC21D41733600D04A92 /* FlurryEmpty.m in Sources */,
 				4C0732DF1D3D500F00C1F3ED /* ViewController.m in Sources */,
 				4CDD8D891D3EDA6B00D04A92 /* Guest.m in Sources */,
 				4C0732DC1D3D500F00C1F3ED /* AppDelegate.m in Sources */,
@@ -494,6 +539,10 @@
 				INFOPLIST_FILE = Manager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sweeney.Manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -507,6 +556,10 @@
 				INFOPLIST_FILE = Manager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sweeney.Manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -571,10 +624,11 @@
 		4C0732E31D3D500F00C1F3ED /* Manager.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				4CDD8DB81D41673F00D04A92 /* Manager1. 3.xcdatamodel */,
 				4CDD8D9C1D41349000D04A92 /* Manager1.2.xcdatamodel */,
 				4C0732E41D3D500F00C1F3ED /* Manager.xcdatamodel */,
 			);
-			currentVersion = 4CDD8D9C1D41349000D04A92 /* Manager1.2.xcdatamodel */;
+			currentVersion = 4CDD8DB81D41673F00D04A92 /* Manager1. 3.xcdatamodel */;
 			path = Manager.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -16,6 +16,7 @@
 @dynamic email;
 @dynamic firstName;
 @dynamic lastName;
+@dynamic phone;
 @dynamic reservation;
 
 @end

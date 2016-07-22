@@ -14,6 +14,7 @@
 @property (strong, nonatomic)UITextField *firstNameField;
 @property (strong, nonatomic)UITextField *lastNameField;
 @property (strong, nonatomic)UITextField *emailField;
+@property (strong, nonatomic)UITextField *phoneField;
 
 
 @end
@@ -45,11 +46,14 @@
     self.lastNameField.placeholder = @"Last Name";
     self.emailField = [[UITextField alloc] init];
     self.emailField.placeholder = @"Email";
+    self.phoneField = [[UITextField alloc] init];
+    self.phoneField.placeholder = @"Phone Number";
     
     NSMutableArray *textFieldArray = [[NSMutableArray alloc]init];
     [textFieldArray addObject:self.firstNameField];
     [textFieldArray addObject:self.lastNameField];
     [textFieldArray addObject:self.emailField];
+    [textFieldArray addObject:self.phoneField];
     
     for (UITextField *field in textFieldArray) {
         
@@ -58,7 +62,7 @@
         NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:field attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:20];
         NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:field attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:-20];
         [self.view addSubview:field];
-        field.layer.borderColor = [[UIColor blackColor] CGColor];
+        field.layer.borderColor = [[UIColor redColor] CGColor];
         field.layer.borderWidth = 2;
         field.layer.cornerRadius = 3.0;
         leading.active = YES;
@@ -70,10 +74,13 @@
     NSLayoutConstraint *lastNameFieldTop = [NSLayoutConstraint constraintWithItem:self.lastNameField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:114];
     
     NSLayoutConstraint *emailFieldTop = [NSLayoutConstraint constraintWithItem:self.emailField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:144];
+    
+    NSLayoutConstraint *phoneFieldTop = [NSLayoutConstraint constraintWithItem: self.phoneField attribute: NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:174];
 
     firstNameFieldTop.active = YES;
     lastNameFieldTop.active = YES;
     emailFieldTop.active = YES;
+    phoneFieldTop.active = YES;
 
     [self.firstNameField becomeFirstResponder];
     
@@ -107,7 +114,8 @@
 -(void)saveButtonSelected: (UIBarButtonItem *)sender{
     Reservation *reservation = [Reservation reservationWithStartDate:self.startDate endDate:self.endDate room:self.room];
     self.room.reservation = reservation;
-    reservation.guest = [Guest guestWithFields:self.firstNameField.text lastName:self.lastNameField.text email:self.emailField.text];
+    reservation.guest = [Guest guestWithFields:self.firstNameField.text lastName:self.lastNameField.text email:self.emailField.text phone:self.phoneField.text];
+
     
     NSError *error;
     [[NSObject managerContext] save:&error];

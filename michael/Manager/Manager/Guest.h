@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Guest : NSManagedObject
 
-+(instancetype)guestWithFields: (NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email;
++(instancetype)guestWithFields: (NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email phone: (NSString *)phone;
 
 
 @end
